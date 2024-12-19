@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: #333333;
+            background-image: url("images/1.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-color: rgb(122, 121, 121);
+            background-blend-mode:soft-light;
+        }
+
+        div {
+            margin-top: 100px;
+            width: 30%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgb(100, 91, 91);
+        }
+
+        input {
+            width: 80%;
+            margin: 10px;
+            padding: 7px;
+            border-radius: 6px;
+            border:1px solid #7b8288;
+        }
+
+        input[type=submit]{
+            background-color: #717fe0;
+            border-radius: 23px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            width: 35%;
+            border: none;
+            cursor:pointer;
+        }
+        input[type=submit]:hover{
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <form action="home.html" method="post">
+            <h1>LOGIN</h1>
+
+            <input type="text" placeholder="Enter your name" name="name" id="name">
+
+            <input type="email" placeholder="Enter your email" name="email" id="email">
+
+            <input type="password" placeholder="Enter password" name="password" id="password">
+
+            <input type="password" placeholder="Confirm password" name="confirmPassword" id="confirmPassword">
+
+            <input type="submit" value="Login" onclick="login(event)" >
+        </form>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+body{
+    font-size: 19px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0%;
+}
+/***************************************** nav bar **************************************************/
+header{
+    padding-top: 20px;
+    padding-left: 70px;
+    position:fixed;
+    padding-bottom: 20px;
+    width: 100%;
+    z-index: 1;
+}
+nav{
+    display: inline;
+}
+#nav,#nav li{
+    display: inline;
+    margin: 30px;
+    font-weight: 600;
+}
+#nav li a{
+    text-decoration: none;
+    color: #333333;
+}
+#nav li a:hover{
+    text-decoration: none;
+    color: #717fe0;
+}
+
+
+#backToTop{
+    visibility: hidden;
+}
+#backToTop img{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding: 12px;
+    background-color: #717fe0;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/****************************************** footer *********************************************/
+
+.footer {
+    background-color: #282c34;
+    color: #fff;
+    /* padding: 10px 0; */
+    font-family: Arial, sans-serif;
+    height: 50vh;
+}
+/* تنسيق البطاقات بدون خلفية وحدود */
+.card {
+    width: 30%;
+    padding: 20px;
+    border: none;
+    background: transparent;
+    text-align: left;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.card p, .card li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* تحسين الروابط */
+.card a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #aaa;
+}
+
+
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.social-media ul {
+    list-style: none;
+    display: flex;        
+    justify-content: center;
+    padding: 0;
+    gap: 20px;            
+}
+
+.social-media ul li {
+    margin: 0;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #aaa;
+}
+
+/************************************* dark mode ************************************************/
+
+.dark{
+    background-color: black;
+    color: white;
+
+}
+.dark #nav li a{
+    text-decoration: none;
+    color: white;
+}

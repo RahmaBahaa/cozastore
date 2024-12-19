@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+         .sliderr {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .slider-image {
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        button.prev {
+            left: 10px;
+        }
+
+        button.next {
+            right: 10px;
+        }
+
+        button:hover {
+            background: #717fe0;
+            color: black;
+        }
+
+        button:focus {
+            outline: none;
+        } 
+
+        .filter {
+            color: black;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+            margin-left: 60px;
+        }
+
+        .filter:hover {
+            background-color: #717fe0;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .title {
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .title:hover {
+            background-color: #717fe0;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .displayDiv {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product-card {
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            width: 20%;
+            height: auto;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+        }
+        .dark .filter{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <img src="images/icons/logo-01.png" alt="logo">
+            <ul id="nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li onclick="dark()"><i class="fa-solid fa-moon"></i></li>
+                <li><a href="cart.html"><i class="zmdi zmdi-shopping-cart" style="font-size: 25px;"></i></a></li>
+                <li id="userName" style="margin-left: 250px;"></li>
+                <li><a href="index.html">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="sliderr" class="sliderr">
+        <img id="sliderImage" class="slider-image" src="images/slide-03.jpg" alt="Slider Image">
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
+    <a href="#sliderr" id="backToTop"><img src="images/icons/top.png"></a>
+    <br><br><br>
+
+    <h1 style="margin-top: 30px; margin-left: 30px;">PRODUCT OVERVIEW</h1>
+    <br>
+    <br>
+    <div class="button-group">
+        <a href="" class="filter" id="Products">All Products</a>
+        <a href="" class="filter" id="Men" onclick="men(event)">Men's Clothing</a>
+        <a href="" class="filter" id="Women" onclick="women(event)">Women's Clothing</a>
+        <a href="" class="filter" id="Jewelry" onclick="jewelry(event)">Jewelry</a>
+        <a href="" class="filter" id="electronics" onclick="electronics(event)">electronics</a>
+    </div>
+    <div class="displayDiv" style="margin-bottom: 50px;"></div>
+
+    <footer class="footer" id="Contact">
+        <div class="section7">
+            <div class="container">
+                <div class="row">
+                    <div class="card">
+                        <h3 style="margin-bottom: 20px;"> About </h3>
+                        <p>Asorem ipsum adipolor sdit amet,<br> consectetur adipisicing elitcf sed do <br>
+                            eiusmod tem <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quos fugit quibusdam enim eius voluptatem aut possimus illo veritatis voluptas sapiente?</p>
+                    </div>
+                    <div class="card">
+                        <h3>New Products</h3>
+                        <ul>
+                            <li>Woman Cloth</li>
+                            <li>Fashion Accessories</li>
+                            <li> AboutMan Accessories</li>
+                            <li>Rubber made Toys</li>
+                        </ul>
+
+                    </div>
+                    <div class="card">
+                        <h3> Contact</h3>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-location-dot"></i> </a> 13 Street, New York, USA</li>
+                            <li><a href="#"><i class="fa-solid fa-phone"></i> </a> +01022256565</li>
+                            <li><a href="#"><i class="fa-solid fa-envelope"></i> </a> mail@domain.com</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <ul>
+                        <li><a class="social-icon" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a class="social-icon" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a class="social-icon" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+/**************************************** slider **********************************************/ 
+        let images = ["images/slide-03.jpg", "images/slide-02.jpg", "images/slide-01.jpg"];
+        let currentIndex = 0;
+
+        function ShowImage(index) {
+            const sliderImage = document.getElementById("sliderImage");
+            sliderImage.src = images[index];
+        }
+
+        
+        function prevImage() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            ShowImage(currentIndex);
+        }
+
+        
+        function nextImage() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            ShowImage(currentIndex);
+        }
+        
+        setInterval(nextImage, 2000);
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>
